@@ -1,6 +1,6 @@
 {
   "name": "proversion",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Upgrade versionable objects",
   "main": "dist/index.js",
   "scripts": {
