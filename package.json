@@ -6,7 +6,8 @@
   "scripts": {
     "build": "parcel build index.js",
     "start": "parcel index.js",
-    "test": "jest --watch",
+    "test": "jest",
+    "watch": "jest --watch",
     "publish": "npm run build"
   },
   "repository": {
