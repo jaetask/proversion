@@ -3,13 +3,13 @@ import proversion from './index';
 describe('proversion', () => {
   it('has interface', () => {
     const result = proversion();
-    expect(result).toHaveProperty('addConverter');
+    expect(result).toHaveProperty('add');
     expect(result).toHaveProperty('upgrade');
   });
 
   it('upgrades to the next version', () => {
     const surveys = proversion();
-    surveys.addConverter(2, (draft) => {
+    surveys.add(2, (draft) => {
       draft.myAddedParam = true;
     });
 
@@ -27,10 +27,10 @@ describe('proversion', () => {
 
   it('upgrades multiple versions', () => {
     const surveys = proversion();
-    surveys.addConverter(2, (draft) => {
+    surveys.add(2, (draft) => {
       draft.myAddedParam = true;
     });
-    surveys.addConverter(3, (draft) => {
+    surveys.add(3, (draft) => {
       draft.myAddedParam = false;
       draft.hi = 'There';
     });
@@ -51,20 +51,20 @@ describe('proversion', () => {
 
   it('upgrades from specific version', () => {
     const surveys = proversion();
-    surveys.addConverter(2, (draft) => {
+    surveys.add(2, (draft) => {
       draft.myAddedParam = true;
     });
-    surveys.addConverter(3, (draft) => {
+    surveys.add(3, (draft) => {
       draft.myAddedParam = false;
       draft.hi = 'There';
     });
-    surveys.addConverter(4, (draft) => {
+    surveys.add(4, (draft) => {
       draft.hi = 'Not today';
     });
-    surveys.addConverter(5, (draft) => {
+    surveys.add(5, (draft) => {
       draft.hi = draft.hi.toLowerCase();
     });
-    surveys.addConverter(6, (draft) => {
+    surveys.add(6, (draft) => {
       draft.hi = draft.hi.replace(/ /g, '_');
     });
 

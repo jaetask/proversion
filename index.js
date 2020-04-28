@@ -3,7 +3,7 @@ import { produce } from 'immer';
 const proversion = () => {
   const converters = {};
   return {
-    addConverter: (to, converter) => {
+    add: (to, converter) => {
       converters[to] = produce((draft) => {
         draft.version = to;
         converter(draft);
