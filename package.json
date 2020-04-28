@@ -1,10 +1,13 @@
 {
   "name": "proversion",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Upgrade versionable objects",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build index.js",
+    "start": "parcel index.js",
+    "test": "jest --watch",
+    "publish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,21 @@
   "bugs": {
     "url": "https://github.com/jaetask/proversion/issues"
   },
-  "homepage": "https://github.com/jaetask/proversion#readme"
+  "homepage": "https://github.com/jaetask/proversion#readme",
+  "peerDependencies": {
+    "immer": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-jest": "^25.4.0",
+    "immer": "^6.0.0",
+    "jest": "^25.4.0",
+    "jest-extended": "^0.11.5",
+    "parcel": "^1.12.4",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "np": "^6.2.3"
+  }
 }
