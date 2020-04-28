@@ -1,0 +1,25 @@
+{
+  "name": "proversion",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaetask/proversion.git"
+  },
+  "keywords": [
+    "immer",
+    "version",
+    "object",
+    "upgrading"
+  ],
+  "author": "Jae Task",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaetask/proversion/issues"
+  },
+  "homepage": "https://github.com/jaetask/proversion#readme"
+}
